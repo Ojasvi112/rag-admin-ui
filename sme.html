@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>File Uploader</title>
+
+  <!-- Security headers (for static hosting; also add via vercel.json) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>✨ File Uploader</h1>
+    <p id="uploadHint" class="subtitle">Upload your files and organize them with smart categories</p>
+
+    <section class="upload-section">
+      <div class="upload-area" tabindex="0" role="button" aria-label="Click or drag files to upload" aria-describedby="uploadHint">
+        <input type="file" id="fileInput" class="file-input" multiple
+               aria-label="Choose files to upload"
+               accept=".jpg,.jpeg,.png,.gif,.bmp,.svg,.webp,.mp4,.avi,.mkv,.mov,.wmv,.flv,.mp3,.wav,.flac,.aac,.ogg,.zip,.rar,.7z,.tar,.gz,.xls,.xlsx,.csv,.ppt,.pptx,.js,.html,.css,.py,.java,.cpp,.c,.pdf,.doc,.docx,.txt">
+        <span class="upload-icon">📎</span>
+        <p class="upload-text">Drop files here or click to browse</p>
+        <p class="upload-hint">Support for multiple files • Common formats welcome</p>
+      </div>
+    </section>
+
+    <section class="files-list" id="filesList" aria-live="polite" role="region" aria-label="Selected files"></section>
+
+    <section class="submit-section">
+      <button class="submit-btn" id="submitBtn" disabled aria-label="Upload selected files">🚀 Upload Files</button>
+    </section>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
