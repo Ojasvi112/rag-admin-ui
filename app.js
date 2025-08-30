@@ -1,7 +1,8 @@
 // ------- Config -------
+const API_BASE = "http://localhost:8080";           // FastAPI base
 const MAX_FILES = 50;
 const MAX_SIZE_BYTES = 100 * 1024 * 1024; // 100MB per file
-const UPLOAD_ENDPOINT = "/api/upload"; // change to your backend route
+const UPLOAD_ENDPOINT = `${API_BASE}/api/upload`;  // change to your backend route
 
 // ------- State & elements -------
 let selectedFiles = []; // { id, file, ...meta }
