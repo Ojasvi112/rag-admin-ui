@@ -4,7 +4,7 @@ export const config = { api: { bodyParser: false } };
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const apiBase = process.env.API_BASE_URL;
+  const apiBase = process.env.API_BASE;
   const apiKey = process.env.API_KEY;
 
   const chunks = [];
