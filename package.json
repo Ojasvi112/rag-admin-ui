@@ -2,7 +2,9 @@
   "name": "RAG_Admin_UI",
   "private": true,
   "scripts": {
-    "dev": "npx http-server -p 5173 -c- ."
+    "dev": "npx http-server -p 5173 -c- .",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "dayjs": "^1.11.15",
