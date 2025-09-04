@@ -1,0 +1,11 @@
+{
+  "name": "RAG_Admin_UI",
+  "private": true,
+  "scripts": {
+    "dev": "npx http-server -p 5173 -c- ."
+  },
+  "dependencies": {
+    "dayjs": "^1.11.15",
+    "papaparse": "^5.5.3"
+  }
+}
