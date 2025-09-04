@@ -2,7 +2,7 @@
   "name": "RAG_Admin_UI",
   "private": true,
   "scripts": {
-    "dev": "npx http-server -p 5173 -c- .",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
